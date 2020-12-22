@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+
+    <style>
+        label {
+            display: inline;
+        }
+    </style>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"> <br>
+            <p id="demo"></p>
+            <label for="Username">User Name:</label>
+            <input type="text" id="Uname" name="Username"> <br>
+            <label for="Password">Password:</label>
+            <input type="text" id="Password" name="Password"><br>
+            <label for="RPassword">Re-Type Password:</label>
+            <input type="text" id="RPassword" name="RPassword"> <br>
+
+            <label for="gender">Gender:</label> <br>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label> <br>
+
+            <label for="skills">Programming Skills : </label> <br>
+            <input type="checkbox" id="java" name="skills">
+            <label for="java"> Java</label><br>
+            <input type="checkbox" id="java" name="skills">
+            <label for="vehicle2"> Ruby</label><br>
+            <input type="checkbox" id="vehicle3" name="skills">
+            <label for="vehicle3"> Net</label> <br>
+            <label for="contact">Contact no.:</label>
+            <input type="text" id="contact" name="contact"> <br>
+            <label for="mail">Email:</label>
+            <input type="email" id="contact" name="contact"> <br>
+            <input type="submit" value="Submit" onclick="validate()">
+        </form>
+
+    </div>
+
+</body>
+
+</html>
