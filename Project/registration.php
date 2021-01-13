@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <ul> 
+            <li><a href="index.php">Home</a></li>
+            <li><a class="active" href="registration.php">Registration</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="donorList.php">Find Donor</a></li>
+        </ul>
+    </nav>
+    <div class='rForm'>
+        <form action="info.php" method="post">
+            <h2>Registration Form</h2>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Name:</label>
+                </div> 
+                <div class="col-75">
+                <input type="text" id="name" name="name" placeholder="Type Name">
+                </div> 
+            </div>       
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="age">Age:</label>
+                </div>  
+                <div class="col-75">
+                    <input type="number" name="age" id="age" placeholder="Type Age"required >
+                </div>
+            </div>   
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="gender">Gender:</label>
+                </div>  
+                <div class="col-75">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>                
+                </div>
+            </div>  
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="bg">Your Blood Group:</label>
+                </div>  
+                <div class="col-75">
+                    <select name="bg" id="bg" required>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+            </div>   
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>  
+                <div class="col-75">
+                    <input type="email" name="email" id="email" placeholder="Type Email"required>   
+                </div>
+            </div>  
+           
+            <div class="row">
+                <div class="col-25">
+                    <label for="num">Phone Number</label>               
+                 </div>  
+                <div class="col-75">
+                    <input type="tel" name="num" id="num" minlength="11" placeholder="Type Phone Number" required>   
+                </div>
+            </div>  
+ 
+            <div class="row">
+                <div class="col-25">
+                    <label for="psw">Password</label>
+                 </div>  
+                <div class="col-75">
+                    <input type="password" id="psw" name="psw" minlength="8" placeholder="Type Password"required>
+  
+                </div>
+            </div>  
+
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>  
+        </form>
+    </div>
+</body>
+</html>
