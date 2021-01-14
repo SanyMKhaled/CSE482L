@@ -7,6 +7,7 @@ $num = $_POST['num'];
 $psw = $_POST['psw'];
 $blood_group = $_POST['bg'];
 $today = date("d/m/Y");
+$addr = $_POST['addr'];
 
 $servername = "localhost";
 $username = "root";
@@ -16,7 +17,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
 die("Connection failed: " . mysqli_connect_error());
 }
-if (mysqli_query($conn, "INSERT INTO registration (id,uname, age,gender,email,num,psw,blood_group,date_created) VALUES ('','$uname', '$age','$gender','$email','$num','$psw','$blood_group','$today')")) {
+if (mysqli_query($conn, "INSERT INTO registration (id,uname, age,gender,email,num,psw,blood_group,date_created,addr) VALUES ('','$uname', '$age','$gender','$email','$num','$psw','$blood_group','$today','$addr')")) {
 echo "New record created successfully";
 } else {
 echo "Error: " . $sql . "<br>" . mysqli_error($conn);

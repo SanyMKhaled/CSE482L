@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
     <nav>
@@ -39,12 +40,21 @@
 
             <div class="row">
                 <div class="col-25">
+                    <label for="addr">Address:</label>
+                </div>  
+                <div class="col-75">
+                    <input type="text" name="addr" id="addr" placeholder="Type address"required >
+                </div>
+            </div>   
+
+            <div class="row">
+                <div class="col-25">
                     <label for="gender">Gender:</label>
                 </div>  
                 <div class="col-75">
-                    <input type="radio" id="male" name="gender" value="male" required>
+                    <input type="radio" id="male" name="gender" value="Male" required>
                         <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
+                    <input type="radio" id="female" name="gender" value="Female">
                         <label for="female">Female</label><br>                
                 </div>
             </div>  

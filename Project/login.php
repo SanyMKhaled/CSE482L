@@ -3,6 +3,8 @@
 <head>    
     <title>Login Form</title>    
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="js/app.js"></script>
 </head>    
 <body>    
     <nav>
@@ -15,21 +17,21 @@
     </nav>
 
     <div class='rForm'>
-        <form action="info.php" method="post">
-            <h2>Login Form</h2>
-            <p>Registration Successfull,Log in here</p>
+        <form action="loginValidation.php" method="post">
+            <h2>Login</h2>
+            <p id='rmvP'>Registration Successfull,Log in here</p>
             <div class="row">
                 <div class="col-25">
-                    <label for="num">Phone Number</label>               
-                 </div>  
+                    <label for="email">Email:</label>
+                </div>  
                 <div class="col-75">
-                    <input type="tel" name="num" id="num" minlength="11" placeholder="Type Phone Number" required>   
+                    <input type="email" name="email" id="email" placeholder="Type Email"required>   
                 </div>
-            </div>  
+            </div>   
  
             <div class="row">
                 <div class="col-25">
-                    <label for="psw">Password</label>
+                    <label for="psw">Password:</label>
                  </div>  
                 <div class="col-75">
                     <input type="password" id="psw" name="psw" minlength="8" placeholder="Type Password"required>
@@ -38,7 +40,7 @@
             </div>  
 
             <div class="row">
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" name='login'>
             </div>  
         </form>   
   </div> 
