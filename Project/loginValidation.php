@@ -8,18 +8,22 @@ if (!$conn) {
 die("Connection failed: " . mysqli_connect_error());
 }
 
+session_start();
+
 if (isset($_POST['login'])){
-    $email = $_POST['email'];
+    $uname = $_POST['name'];
     $psw = $_POST['psw'];
 }
-session_start();
       
-      $sql = "SELECT email,psw FROM registration WHERE email = '$email' AND psw = '$psw'";
+      $sql = "SELECT uname,psw FROM registration WHERE uname = '$uname' AND psw = '$psw'";
       $result = mysqli_query($conn,$sql);
-      if($result){
-        header("location: donorlist.php");
+      if (mysqli_num_rows($result) == 1){
+          $_SESSION['login'] = true;
+          $_SESSION['name'] =$uname;
+        header("location: profile.php");
       }
       else {
-        $error = "Your Login Name or Password is invalid";
+        echo"Invalid UserName or Password. Redirecting to Login Page...";
+        header("Refresh:1.5; url=login.php");
       }
 ?>

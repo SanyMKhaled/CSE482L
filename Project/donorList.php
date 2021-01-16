@@ -3,6 +3,7 @@
 <title></title>
 <link rel="stylesheet" href="css/donor.css">
 <link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/footer.css">
 <script>
 function usersearchTxt(str) {
     var xmlhttp = new XMLHttpRequest();
@@ -24,26 +25,24 @@ console.log(str);
             <li><a href="registration.php">Registration</a></li>
             <li><a  href="login.php">Login</a></li>
             <li><a class="active" href="donorList.php">Find Donor</a></li>
+            <li><a href="bloodBanks.php">Blood Banks</a></li>
         </ul>
     </nav>
+<div id="search">
+<label for="search"> Search Name or Blood Group: </label>
+<input id="searchBox" type="text" placeholder="Seacrh..." name="search"autofocus onkeyup="usersearchTxt(document.getElementById('searchBox').value);">
 
-<label for="search"> Search Name or Blood Group</label>
-<input id="searchBox" type="text" placeholder="Seacrh..." name="search" onkeyup="usersearchTxt(document.getElementById('searchBox').value);">
+</div>
 <div id="searchTxt">
 <table id="donor">
-<tr>
-<th>Name</th>
-<th>Age</th>
-<th>Gender</th>
-<th>Blood Group</th>
-<th>Phone Number</th>
-<th>Location</th>
-</tr>
 <?php
 include 'finder.php';
 echo fetch('');
 ?>
 </table>
 </div>
+    <div class="footer">
+        <p class="p"><a href="contactUs.php">Contact Us</a> &#169; 2021 - CSE482L	</p>
+    </div>
 </body>
 </html>

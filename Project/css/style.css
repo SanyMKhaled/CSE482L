@@ -2,14 +2,6 @@ body {
     background: #252839;
 }
 
-
-/* Navbar Starts */
-
-
-/* Form Starts */
-
-div.rForm {}
-
 h2 {
     text-align: center;
     margin: 0px;
@@ -21,12 +13,12 @@ h2 {
 
 form {
     background-color: #273c75;
-    border: 1px solid goldenrod;
+    border: 2px solid black;
     border-radius: 15px;
     width: 54%;
     box-sizing: border-box;
     position: absolute;
-    margin-top: 50px;
+    margin-top: 45px;
     margin-left: 23%;
     margin-right: 23%;
 }

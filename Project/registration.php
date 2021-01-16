@@ -6,6 +6,7 @@
     <title>Registration</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <nav>
@@ -14,18 +15,19 @@
             <li><a class="active" href="registration.php">Registration</a></li>
             <li><a href="login.php">Login</a></li>
             <li><a href="donorList.php">Find Donor</a></li>
+            <li><a href="bloodBanks.php">Blood Banks</a></li>
         </ul>
     </nav>
     <div class='rForm'>
-        <form action="info.php" method="post">
+        <form action="Info.php" method="post">
             <h2>Registration Form</h2>
 
             <div class="row">
                 <div class="col-25">
-                    <label for="name">Name:</label>
+                    <label for="name">UserName:</label>
                 </div> 
                 <div class="col-75">
-                <input type="text" id="name" name="name" placeholder="Type Name">
+                <input type="text" id="name" name="name" autofocus placeholder="Type UserName(No White Space)" pattern="^\S+$">
                 </div> 
             </div>       
 
@@ -109,6 +111,9 @@
                 <input type="submit" value="Submit">
             </div>  
         </form>
+    </div>
+    <div class="footer">
+        <p class="p"><a href="contactUs.php">Contact Us</a> &#169; 2021 - CSE482L	</p>
     </div>
 </body>
 </html>

@@ -18,12 +18,14 @@ if (!$conn) {
 die("Connection failed: " . mysqli_connect_error());
 }
 if (mysqli_query($conn, "INSERT INTO registration (id,uname, age,gender,email,num,psw,blood_group,date_created,addr) VALUES ('','$uname', '$age','$gender','$email','$num','$psw','$blood_group','$today','$addr')")) {
-echo "New record created successfully";
+echo "New record created successfully, Redirecting to Login Page";
+header("Refresh:2; url=login.php");
 } else {
 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+
+header('Location: registration.php');
 }
 
-header('Location: login.php');
 
 mysqli_close($conn);
 ?>

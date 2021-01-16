@@ -4,6 +4,7 @@
     <title>Login Form</title>    
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="js/app.js"></script>
 </head>    
 <body>    
@@ -13,21 +14,22 @@
             <li><a href="registration.php">Registration</a></li>
             <li><a class="active" href="login.php">Login</a></li>
             <li><a href="donorList.php">Find Donor</a></li>
+            <li><a href="bloodBanks.php">Blood Banks</a></li>
         </ul>
     </nav>
 
     <div class='rForm'>
         <form action="loginValidation.php" method="post">
             <h2>Login</h2>
-            <p id='rmvP'>Registration Successfull,Log in here</p>
+
             <div class="row">
                 <div class="col-25">
-                    <label for="email">Email:</label>
-                </div>  
+                    <label for="name">UserName:</label>
+                </div> 
                 <div class="col-75">
-                    <input type="email" name="email" id="email" placeholder="Type Email"required>   
-                </div>
-            </div>   
+                <input type="text" id="name" name="name" autofocus placeholder="Type UserName(No White Space)" pattern="^\S+$">
+                </div> 
+            </div>  
  
             <div class="row">
                 <div class="col-25">
@@ -44,5 +46,9 @@
             </div>  
         </form>   
   </div> 
+
+  <div class="footer">
+        <p class="p"><a href="contactUs.php">Contact Us</a> &#169; 2021 - CSE482L	</p>
+    </div>
 </body>    
 </html>     
